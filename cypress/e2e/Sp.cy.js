@@ -1,5 +1,6 @@
 import Login from "../pages/login_page.js"
 import Sale from "../pages/Sale_Processing.js"
+import Customer from "../pages/Customer.js"
 
 
 
@@ -45,7 +46,6 @@ it('Sale Processing Test', function(){
 it.only('Customer Test', function(){
 
     cy.viewport(1200,1200)
-    const lp=new Login();
     const sp=new Sale();
     const cp=new Customer();
     sp.clickburgermenu()
