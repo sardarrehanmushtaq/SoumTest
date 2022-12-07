@@ -10,7 +10,7 @@ class Sale{
    editinglinebtn="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[4]/a[1]"
    supplied="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[1]/div/div[1]/div/table/tbody/tr[1]/td[3]/div/div/div[1]/input"
    Process_button='/html/body/div[1]/div/div[3]/div[3]/div/div[3]/button[4]'
-   Customer_purchase_order="/html/body/div[3]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div/div/form/div/div/div/div[11]/div/div/div/input"
+   Customer_purchase_order="/html/body/div[4]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div/div/form/div/div[1]/div/div[4]/div/div/input"
    Saleconfirmation="/html/body/div[3]/div[2]/div/div[3]/button[1]/span[1]/div"
    Cancel_sale="/html/body/div[1]/div/div[3]/div[3]/div/div[3]/button[3]"
    selecting_no="/html/body/div[3]/div[2]/div/div[2]/button[2]"

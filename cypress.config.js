@@ -5,7 +5,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    defaultCommandTimeout: 25000,
+    defaultCommandTimeout: 500000,
     projectId: "o48yws"
   },
 });
