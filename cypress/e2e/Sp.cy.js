@@ -43,7 +43,7 @@ it('Sale Processing Test', function(){
 
 })
 
-it.only('Customer Test', function(){
+it('Customer Test', function(){
     cy.visit('https://mp32client.markinsondev.com/',{timeout:1200000})
     cy.viewport(1200,1200)
     const sp=new Sale();
