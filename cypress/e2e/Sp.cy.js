@@ -48,9 +48,6 @@ it.only('Customer Test', function(){
     const lp=new Login();
     const sp=new Sale();
     const cp=new Customer();
-    lp.enterUsername()
-    lp.enterPassword()
-    lp.clickLogin()
     sp.clickburgermenu()
     cp.clickaccountreceivaebles()
     cp.clickcustomermaintenance()

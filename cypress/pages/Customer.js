@@ -17,3 +17,4 @@ clickcustomermaintenance(){
 }
 
 }
+export default Customer
