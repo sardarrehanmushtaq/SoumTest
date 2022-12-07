@@ -41,3 +41,18 @@ it('Sale Processing Test', function(){
 
 
 })
+
+it.only('Customer Test', function(){
+
+    cy.viewport(1200,1200)
+    const lp=new Login();
+    const sp=new Sale();
+    const cp=new Customer();
+    lp.enterUsername()
+    lp.enterPassword()
+    lp.clickLogin()
+    sp.clickburgermenu()
+    cp.clickaccountreceivaebles()
+    cp.clickcustomermaintenance()
+
+})
