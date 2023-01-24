@@ -2,15 +2,14 @@ import Login from "../pages/login_page.js"
 import Sale from "../pages/Sale_Processing.js"
 import Customer from "../pages/Customer.js"
 
+Cypress.on('uncaught:exception', () => false)
 
 
 it('Sale Processing Test', function(){
-
-    cy.visit('https://mp32client.markinsondev.com/',{timeout:1200000})
-    cy.viewport(1200,1200)
     const lp=new Login();
     const sp=new Sale();
     const purchaseorder=Math.floor(Math.random() * 100000000000);
+    lp.enterURL()
     lp.enterUsername()
     lp.enterPassword()
     lp.clickLogin()
@@ -51,5 +50,6 @@ it('Customer Test', function(){
     sp.clickburgermenu()
     cp.clickaccountreceivaebles()
     cp.clickcustomermaintenance()
+    sp.Apply()
 
 })
