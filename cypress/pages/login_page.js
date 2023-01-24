@@ -7,6 +7,7 @@
     
     enterURL(){
         cy.visit(Cypress.config('baseUrl'))
+        cy.viewport(1200,1200)
 
     }
 
