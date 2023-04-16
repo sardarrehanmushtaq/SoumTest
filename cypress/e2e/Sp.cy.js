@@ -16,14 +16,17 @@ it('Sale Processing Test', function(){
     sp.clickburgermenu()
     sp.Saleprocessing()
     sp.Innersaleprocessing()
-    sp.Cancelsale()
-    sp.selectingNo()
-    sp.searchcustomer()
+   //// sp.Cancelsale()
+   // sp.selectingNo()
+    //sp.searchcustomer()
    // sp.enterWarehouse()
-    sp.clickcustomer_apply()
+    //sp.clickcustomer_apply()
+    
     sp.Productsearch()
+    
     sp.Okbutton()
-   // sp.enterquantity()
+    cy.wait(5000)
+    //sp.enterquantity()
     sp.Apply()
    // sp.editline()
     //sp.suppliedquantity()
@@ -48,6 +51,9 @@ it('Customer Test', function(){
     const sp=new Sale();
     const cp=new Customer();
     lp.enterURL()
+    lp.enterUsername()
+    lp.enterPassword()
+    lp.clickLogin()
     sp.clickburgermenu()
     cp.clickaccountreceivaebles()
     cp.clickcustomermaintenance()

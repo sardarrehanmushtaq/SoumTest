@@ -2,7 +2,7 @@ class Sale{
 
    Burger_menu='/html/body/div/div/div[1]/header/div/button'
    Sale_processing= '/html/body/div[2]/div/div/div[1]/ul/div[1]'
-   Inner_saleprocessing='/html/body/div[3]/div/div/div[1]/div/div[2]/div[2]/div/div/div/a/div'
+   Inner_saleprocessing='/html/body/div[3]/div/div/div[1]/ul/div[2]/div[2]/div/div/ul/a/div'
    Product_search='/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/div/div/div[1]/div/div/input'
    quantity="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[1]/div[2]/div[1]/div/div/input"
    Ok_button= '/html/body/div[3]/div[2]/div/div[3]/div[2]/div'
@@ -62,7 +62,7 @@ clickcustomer_apply(){
 }
 
 Productsearch(){
-    cy.xpath(this.Product_search).should("be.visible").type('BK-KIT{enter}')   
+    cy.xpath(this.Product_search).should("be.visible").type('rm-1007{enter}')   
 
 }
 
@@ -70,7 +70,7 @@ Okbutton(){
     cy.xpath(this.Ok_button).should("be.visible").click()
 }
 enterquantity(){
-    cy.xpath(this.quantity).should("be.visible").type(11)
+    cy.xpath(this.quantity).should("be.visible").type('11{enter}')
 }
 
 
