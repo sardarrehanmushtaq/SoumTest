@@ -13,16 +13,18 @@ it('Sale Processing Test', function(){
     lp.enterUsername()
     lp.enterPassword()
     lp.clickLogin()
-    sp.clickburgermenu()
-    sp.Saleprocessing()
-    sp.Innersaleprocessing()
+    sp.clickdashboardsaleicon()
+    cy.wait(2000)
+    sp.Productsearch()
+    sp.clickproductsearchbutton()
+   // sp.clickburgermenu()
+   // sp.Saleprocessing()
+   // sp.Innersaleprocessing()
    //// sp.Cancelsale()
    // sp.selectingNo()
     //sp.searchcustomer()
    // sp.enterWarehouse()
     //sp.clickcustomer_apply()
-    
-    sp.Productsearch()
     
     sp.Okbutton()
     cy.wait(5000)
@@ -34,22 +36,61 @@ it('Sale Processing Test', function(){
     sp.Customerpurchaseorder(purchaseorder)
     sp.Saleconfirm()
     sp.cashlocation()
-    sp.paymentmethod()
-    sp.pricechange()
-    sp.paymentapply()
-    sp.cashmeup()
-    //sp.paymentok()
+   // sp.paymentmethod()
+   // sp.pricechange()
+   // sp.paymentapply()
+   // sp.cashmeup()
+   // sp.paymentok()
 
 
 
 
 })
+it('Sale Processing Kitting Product', function(){
+    const lp=new Login();
+    const sp=new Sale();
+    const purchaseorder=Math.floor(Math.random() * 100000000000);
+    lp.enterURL()
+    lp.enterUsername()
+    lp.enterPassword()
+    lp.clickLogin()
+    //sp.clickburgermenu()
+    sp.clickdashboardsaleicon()
+   // sp.Saleprocessing()
+    //sp.Innersaleprocessing()
+    sp.KittingProductsearch()
+    sp.clickproductsearchbutton()
+    cy.wait(3000)
+    sp.Okbutton()
+    cy.wait(3000)
+    sp.sellaskit()
+
+    
+    sp.Apply()
+   //sp.productprice()
+   // sp.priceoverridereason()
+    //sp.priceoverrideok()
+    sp.clickproductdetails()
+    cy.wait(3000)
+    sp.clickunsaved()
+    sp.clickkitcomponents()
+    sp.clickcomponentdetails()
+    cy.wait(3000)
+    sp.clickcomponentdetailsok()
+    cy.wait(3000)
+    
+
+
+})
+
 
 it('Customer Test', function(){
 
     const lp=new Login();
     const sp=new Sale();
     const cp=new Customer();
+    const customernumber=Math.floor(Math.random() * 10000);
+    const customername=Math.floor(Math.random() * 10000);
     lp.enterURL()
     lp.enterUsername()
     lp.enterPassword()
@@ -57,6 +98,11 @@ it('Customer Test', function(){
     sp.clickburgermenu()
     cp.clickaccountreceivaebles()
     cp.clickcustomermaintenance()
-    sp.Apply()
+    cp.entercustomer()
+    cp.clickaddcustomer()
+    cp.entercustomernumber(customernumber)
+    cp.entercustomername(customername)
+    cp.clicktickbutton()
+
 
 })
