@@ -1,6 +1,6 @@
 import Login from "../pages/login_page.js"
 import Sale from "../pages/Sale_Processing.js"
-import Customer from "../pages/Customer.js"
+
 
 Cypress.on('uncaught:exception', () => false)
 
@@ -27,7 +27,6 @@ it('Sale Processing Test', function(){
     //sp.searchcustomer()
    // sp.enterWarehouse()
     //sp.clickcustomer_apply()
-    
     sp.Okbutton()
     cy.wait(5000)
     //sp.enterquantity()
@@ -48,7 +47,7 @@ it('Sale Processing Test', function(){
 
 
 })
-it('Sale Processing Kitting Product', function(){
+it.only('Sale Processing Kitting Product', function(){
     const lp=new Login();
     const sp=new Sale();
     const purchaseorder=Math.floor(Math.random() * 100000000000);
@@ -63,13 +62,10 @@ it('Sale Processing Kitting Product', function(){
     sp.KittingProductsearch()
     sp.clickproductsearchbutton()
     cy.wait(3000)
+    sp.sellaskit()
     sp.Okbutton()
     cy.wait(3000)
-    sp.sellaskit()
     sp.Apply()
-   //sp.productprice()
-   // sp.priceoverridereason()
-    //sp.priceoverrideok()
     sp.clickproductdetails()
     cy.wait(3000)
     sp.clickunsaved()
@@ -78,6 +74,10 @@ it('Sale Processing Kitting Product', function(){
     cy.wait(3000)
     sp.clickcomponentdetailsok()
     cy.wait(3000)
+   //sp.productprice()
+   // sp.priceoverridereason()
+    //sp.priceoverrideok()
+    
     
 
 
