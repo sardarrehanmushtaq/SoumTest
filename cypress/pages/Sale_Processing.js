@@ -25,14 +25,28 @@ class Sale{
    payment_entry_ok="/html/body/div[3]/div[2]/div/div[3]/button[1]"
    sell_as_kit="/html/body/div[3]/div[2]/div/div[2]/button[3]"
    product_price="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[1]/div[3]/div[1]/div[1]/div/div/div/input"
-   price_override_reason="/html/body/div[3]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/form/div/div/div/div[1]/div/div[1]/div/div/input"
-   price_override_ok="/html/body/div[3]/div[2]/div/div[3]/button[1]"
+   price_override_reason="/html/body/div[4]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/form/div/div/div/div[1]/div/div[1]/div/div/input"
+   price_override_ok="/html/body/div[4]/div[2]/div/div[3]/button[1]"
    product_details="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[4]/td[1]"
    kit_components="/html/body/div[1]/div/div[3]/div[2]/div/div[2]/button[3]"
    component_details="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[1]"
    component_details_ok="/html/body/div[1]/div/div[3]/div[2]/div/div[3]/button[2]"
    unsaved_button="/html/body/div[4]/div[2]/div/div[2]/button"
    productsearchbutton="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/div/div/div[1]/div/div/div/button"
+   product_catalogue="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[3]/div/div/div/div/button[2]/span[1]"
+   addtoline="/html/body/div[1]/div/div[3]/div[2]/div/div[3]/button"
+   addlineapply="/html/body/div[3]/div[2]/div/div[2]/div/div[2]/button[1]"
+   sellingpriceok="/html/body/div[4]/div[2]/div/div[2]/button[1]"
+   cataloguekitting="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div/div[1]/div[2]/div[1]/div/div/div[6]/div[2]/table/tbody/tr[2]/td[2]"
+   cataloguesellaskit="/html/body/div[4]/div[2]/div/div[2]/button[3]"
+   kittingprice="/html/body/div[3]/div[2]/div/div[2]/div/div[1]/span[3]/div/div[1]/div[1]/div/div/div/input"
+   Mtkitting="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div/div[1]/div[2]/div[1]/div/div/div[6]/div[1]/div/div[1]/div/table/tbody/tr[5]/td[2]"
+   selectingboms="/html/body/div[5]/div[2]/div/div[2]/button[2]"
+   enterquantityboms="/html/body/div[4]/div[2]/div/div[2]/div/div[1]/span[2]/div/div/div/input"
+   backorder="/html/body/div[5]/div[2]/div/div[2]/button[3]"
+   catalogueproductdetails="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div/div[1]/div[2]/div[1]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[1]"
+   entrydetails="/html/body/div[1]/div/div[3]/div[2]/div/div[2]/button[2]"
+   clickback="/html/body/div[1]/div/div[3]/div[2]/div/div[1]/div/button"
 
 clickdashboardsaleicon(){
     cy.xpath(this.dashboard_sale_icon).should("be.visible").click() 
@@ -155,7 +169,7 @@ productprice(){
     cy.xpath(this.product_price).should("be.visible").type('4{enter}')
 }
 priceoverridereason(){
-    cy.xpath(this.price_override_reason).should("be.visible").type('def{enter}')
+    cy.xpath(this.price_override_reason).should("be.visible").type('def{tab}')
 }
 priceoverrideok(){
     cy.xpath(this.price_override_ok).should("be.visible").click()
@@ -178,6 +192,56 @@ clickcomponentdetailsok(){
 }
 clickunsaved(){
     cy.xpath(this.unsaved_button).click()
+
+}
+clickproductcatalogue(){
+    cy.xpath(this.product_catalogue).should("be.visible").click()
+
+}
+clickaddtoline(){
+    cy.xpath(this.addtoline).should("be.visible").click()
+
+}
+clickaddlineapply(){
+    cy.xpath(this.addlineapply).should("be.visible").click()
+
+}
+clicksellingprice(){
+    cy.xpath(this.sellingpriceok).should("be.visible").click()
+
+}
+clickkitting(){
+    cy.xpath(this.cataloguekitting).should("be.visible").click()
+}
+clicksellkit(){
+    cy.xpath(this.cataloguesellaskit).should("be.visible").click()
+}
+enterkittingprice(){
+    cy.xpath(this.kittingprice).should("be.visible").type('4000000}')
+
+}
+clickmtkitting(){
+    cy.xpath(this.Mtkitting).should("be.visible").type('4000000}')
+}
+clickselectingboms(){
+    cy.xpath(this.selectingboms).should("be.visible").type('4000000}')
+}
+enterquantityofboms(){
+    cy.xpath(this.enterquantityboms).should("be.visible").clear()
+    cy.xpath(this.enterquantityboms).should("be.visible").type('40')
+}
+clickbackorder(){
+    cy.xpath(this.backorder).should("be.visible").click()
+}
+clickcatalogueproductdetails(){
+    cy.xpath(this.catalogueproductdetails).should("be.visible").click()
+
+}
+clickentrydetails(){
+        cy.xpath(this.catalogueproductdetails).should("be.visible").click()
+}
+clickbackbutton(){
+    cy.xpath(this.clickback).should("be.visible").click()
 
 }
 }
