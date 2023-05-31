@@ -44,9 +44,9 @@ it('Sale Processing Test', function(){
    // sp.paymentok()
 
 
-
-
 })
+
+
 it('Sale Processing Kitting Product', function(){
     const lp=new Login();
     const sp=new Sale();
@@ -78,10 +78,12 @@ it('Sale Processing Kitting Product', function(){
    // sp.priceoverridereason()
     //sp.priceoverrideok()
     
-    
+}) 
 
 
 })
+describe('Test Suite for Product Catalogue', () => {
+
 it('Product Catalogue', function(){
 
     const lp=new Login();
@@ -151,7 +153,7 @@ it('Product Catalogue Kitting with Multiple BOMS', function(){
 
 
 })
-it.only('Catalogue Product Details and Entry Details', function(){
+it('Catalogue Product Details and Entry Details', function(){
 
     const lp=new Login();
     const sp=new Sale();  
@@ -169,5 +171,29 @@ it.only('Catalogue Product Details and Entry Details', function(){
 
 
 })
+it.only('Catalogue Search', function(){
 
+    const lp=new Login();
+    const sp=new Sale();  
+    lp.enterURL()
+    lp.enterUsername()
+    lp.enterPassword()
+    lp.clickLogin()
+    sp.clickdashboardsaleicon()
+    cy.wait(10000)
+    sp.clickproductcatalogue()
+    cy.wait(10000)
+    sp.clickcataloguesearch()
+    cy.wait(3000)
+    sp.entersearch()
+    cy.wait(5000)
+  //  sp.clickselectingsearch()
+  //  sp.okdabao()
+
+  //  cy.wait(5000)
+ //   sp.clicksearchbutton()
+
+   // 
+
+})
 })

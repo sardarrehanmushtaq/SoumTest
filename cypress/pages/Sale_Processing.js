@@ -47,6 +47,11 @@ class Sale{
    catalogueproductdetails="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div/div[1]/div[2]/div[1]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[1]"
    entrydetails="/html/body/div[1]/div/div[3]/div[2]/div/div[2]/button[2]"
    clickback="/html/body/div[1]/div/div[3]/div[2]/div/div[1]/div/button"
+   clickcatalogsearch="/html/body/div[1]/div/div[3]/div[2]/div/div[2]/button[1]"
+   enterproductsearch="/html/body/div[3]/div[2]/div/div[2]/div[1]/div/div/div[1]/input"
+   selectingsearch="/html/body/div[4]/div[2]/div/div[2]/div[2]/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td"
+   buttonok="/html/body/div[4]/div[2]/div/div[3]/button[2]"
+   clicksearchicon="/html/body/div[4]/div[2]/div/div[2]/div[1]/button"
 
 clickdashboardsaleicon(){
     cy.xpath(this.dashboard_sale_icon).should("be.visible").click() 
@@ -169,7 +174,7 @@ productprice(){
     cy.xpath(this.product_price).should("be.visible").type('4{enter}')
 }
 priceoverridereason(){
-    cy.xpath(this.price_override_reason).should("be.visible").type('def{tab}')
+    cy.xpath(this.price_override_reason).should("be.visible").type('def')
 }
 priceoverrideok(){
     cy.xpath(this.price_override_ok).should("be.visible").click()
@@ -224,7 +229,7 @@ clickmtkitting(){
     cy.xpath(this.Mtkitting).should("be.visible").type('4000000}')
 }
 clickselectingboms(){
-    cy.xpath(this.selectingboms).should("be.visible").type('4000000}')
+    cy.xpath(this.selectingboms).should("be.visible").click()
 }
 enterquantityofboms(){
     cy.xpath(this.enterquantityboms).should("be.visible").clear()
@@ -238,10 +243,33 @@ clickcatalogueproductdetails(){
 
 }
 clickentrydetails(){
-        cy.xpath(this.catalogueproductdetails).should("be.visible").click()
+    cy.xpath(this.catalogueproductdetails).should("be.visible").click()
 }
 clickbackbutton(){
     cy.xpath(this.clickback).should("be.visible").click()
+
+}
+clickcataloguesearch(){
+    cy.xpath(this.clickcatalogsearch).should("be.visible").click()
+}
+entersearch(){
+    cy.xpath(this.enterproductsearch).should("be.visible").type(Cypress.env('SEARCHPRODUCT'))
+    cy.xpath(this.enterproductsearch).should("be.visible").type('{enter}')
+
+
+}
+clickselectingsearch(){
+
+    cy.xpath(this.selectingsearch).should("be.visible").dblclick()
+
+}
+okdabao(){
+    cy.xpath(this.buttonok).should("be.visible").click()
+
+}
+clicksearchbutton(){
+
+    cy.xpath(this.clicksearchicon).should("be.visible").click()
 
 }
 }
