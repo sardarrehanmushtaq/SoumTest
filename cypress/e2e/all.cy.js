@@ -1,3 +1,5 @@
 import './Cm.cy.js'
 import './Sp.cy.js'
 import './PC.cy.js'
+import './PSale.cy.js'
+import './Quote.cy.js'
