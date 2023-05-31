@@ -52,6 +52,15 @@ class Sale{
    selectingsearch="/html/body/div[4]/div[2]/div/div[2]/div[2]/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td"
    buttonok="/html/body/div[4]/div[2]/div/div[3]/button[2]"
    clicksearchicon="/html/body/div[4]/div[2]/div/div[2]/div[1]/button"
+   recallquote="/html/body/div[1]/div/div[3]/div[2]/div/div[2]/button[2]"
+   quotetable="/html/body/div[3]/div[2]/div/div[2]/div/div[1]/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[1]"
+   quoteok="/html/body/div[3]/div[2]/div/div[3]/button[1]"
+   makingquote="/html/body/div[1]/div/div[3]/div[2]/div/div[3]/button[2]"
+   confirmquote="/html/body/div[3]/div[2]/div/div[3]/button[1]"
+   parksale="/html/body/div[1]/div/div[3]/div[2]/div/div[3]/button[1]"
+   parksaleconfirm="/html/body/div[3]/div[2]/div/div[3]/button[1]"
+   recallsale="/html/body/div[1]/div/div[3]/div[2]/div/div[2]/button[1]"
+   recallsaleconfirm="/html/body/div[3]/div[2]/div/div[2]/div/div[1]/div/div[6]/div[2]/table/tbody/tr[1]/td[1]"
 
 clickdashboardsaleicon(){
     cy.xpath(this.dashboard_sale_icon).should("be.visible").click() 
@@ -82,7 +91,9 @@ selectingNo(){
 }
 
 searchcustomer(){
-    cy.xpath(this.search_customer).should("be.visible").type(Cypress.env('CUSTOMER')) 
+    cy.xpath(this.search_customer).should("be.visible").type(Cypress.env('CUSTOMER'))
+    cy.xpath(this.search_customer).should("be.visible").type('{enter}') 
+
 }
 
 
@@ -270,6 +281,45 @@ okdabao(){
 clicksearchbutton(){
 
     cy.xpath(this.clicksearchicon).should("be.visible").click()
+
+}
+clickrecallquote(){
+    cy.xpath(this.recallquote).should("be.visible").click()
+}
+clickquotetable(){
+
+    cy.xpath(this.quotetable).should("be.visible").click()
+
+}
+clickquoteok(){
+    cy.xpath(this.quoteok).should("be.visible").click()
+
+}
+
+clickmakingquote(){
+    cy.xpath(this.makingquote).should("be.visible").click()
+
+}
+
+clickconfirmquote(){
+    cy.xpath(this.confirmquote).should("be.visible").click()
+
+
+}
+clickparksale(){
+    cy.xpath(this.parksale).should("be.visible").click()
+
+}
+clickparksaleconfirm(){
+    cy.xpath(this.parksaleconfirm).should("be.visible").click()
+
+}
+clickrecallsale(){
+    cy.xpath(this.recallsale).should("be.visible").click()
+ 
+}
+clickrecallsaleconfirm(){
+    cy.xpath(this.recallsaleconfirm).should("be.visible").click()
 
 }
 }

@@ -45,7 +45,24 @@ it('Sale Processing Test', function(){
 
 
 })
+it('Sale Processing Add Product', function(){
+    const lp=new Login();
+    const sp=new Sale();
+    const purchaseorder=Math.floor(Math.random() * 100000000000);
+    lp.enterURL()
+    lp.enterUsername()
+    lp.enterPassword()
+    lp.clickLogin()
+    sp.clickdashboardsaleicon()
+    cy.wait(5000)
+    sp.Productsearch()
+    sp.clickproductsearchbutton()
+    sp.Okbutton()
+    sp.Apply()
+    cy.wait(5000)
+    
 
+})
 
 it('Sale Processing Kitting Product', function(){
     const lp=new Login();
@@ -80,8 +97,47 @@ it('Sale Processing Kitting Product', function(){
     
 }) 
 
+it.only('Making Quote', function(){
+
+    const lp=new Login();
+    const sp=new Sale();
+    const purchaseorder=Math.floor(Math.random() * 100000000000);
+    lp.enterURL()
+    lp.enterUsername()
+    lp.enterPassword()
+    lp.clickLogin()
+    sp.clickdashboardsaleicon()
+    cy.wait(5000)
+    sp.clickmakingquote()
+    sp.clickconfirmquote()
+
+
 
 })
+
+it('Recall Quote', function(){
+
+    const lp=new Login();
+    const sp=new Sale();
+    const purchaseorder=Math.floor(Math.random() * 100000000000);
+    lp.enterURL()
+    lp.enterUsername()
+    lp.enterPassword()
+    lp.clickLogin()
+    sp.clickdashboardsaleicon()
+    cy.wait(5000)
+    sp.clickrecallquote()
+    sp.clickquotetable()
+    sp.clickquoteok()
+    cy.wait(5000)
+
+
+
+
+
+})
+})
+
 describe('Test Suite for Product Catalogue', () => {
 
 it('Product Catalogue', function(){
@@ -149,9 +205,6 @@ it('Product Catalogue Kitting with Multiple BOMS', function(){
     sp.clickcatalogueproductdetails()
 
 
-
-
-
 })
 it('Catalogue Product Details and Entry Details', function(){
 
@@ -171,7 +224,7 @@ it('Catalogue Product Details and Entry Details', function(){
 
 
 })
-it.only('Catalogue Search', function(){
+it('Catalogue Search', function(){
 
     const lp=new Login();
     const sp=new Sale();  
@@ -197,3 +250,4 @@ it.only('Catalogue Search', function(){
 
 })
 })
+
