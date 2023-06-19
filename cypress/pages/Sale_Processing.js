@@ -61,6 +61,11 @@ class Sale{
    parksaleconfirm="/html/body/div[3]/div[2]/div/div[3]/button[1]"
    recallsale="/html/body/div[1]/div/div[3]/div[2]/div/div[2]/button[1]"
    recallsaleconfirm="/html/body/div[3]/div[2]/div/div[2]/div/div[1]/div/div[6]/div[2]/table/tbody/tr[1]/td[1]"
+   edit_line="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[4]/a[1]"
+   supplied_quantity="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[1]/div/div[1]/div/table/tbody/tr[1]/td[4]/div/div/div[1]/input"
+   saveline="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[4]/a[1]"
+   sopurchaseorder="/html/body/div[3]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div/div/form/div/div[1]/div/div[4]/div/div/input"
+   saleorderok="/html/body/div[3]/div[2]/div/div[3]/button[1]"
 
 clickdashboardsaleicon(){
     cy.xpath(this.dashboard_sale_icon).should("be.visible").click() 
@@ -118,7 +123,7 @@ Okbutton(){
     cy.xpath(this.Ok_button).should("be.visible").click()
 }
 enterquantity(){
-    cy.xpath(this.quantity).should("be.visible").type('11{enter}')
+    cy.xpath(this.quantity).should("be.visible").type('3{enter}')
 }
 
 
@@ -320,6 +325,27 @@ clickrecallsale(){
 }
 clickrecallsaleconfirm(){
     cy.xpath(this.recallsaleconfirm).should("be.visible").click()
+
+}
+clickeditline(){
+    cy.xpath(this.edit_line).should("be.visible").click()
+
+}
+clicklinesuppliedquantity(){
+    cy.xpath(this.supplied_quantity).should("be.visible").click()
+    cy.xpath(this.supplied_quantity).should("be.visible").type('0')
+
+}
+clicksaveline(){
+    cy.xpath(this.saveline).should("be.visible").click()
+
+}
+entersopurchaseorder(purchaseorder){
+    cy.xpath(this.sopurchaseorder).should("be.visible").type(purchaseorder)
+    
+}
+clicksaleorderok(){
+    cy.xpath(this.saleorderok).should("be.visible").click()
 
 }
 }
