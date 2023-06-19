@@ -7,7 +7,7 @@ Cypress.on('uncaught:exception', () => false)
 describe('Test Suite for Sale Processing', () => {
 
 
-it('Sale Processing Test', function(){
+it.only('Sale Processing Test', function(){
     const lp=new Login();
     const sp=new Sale();
     const purchaseorder=Math.floor(Math.random() * 100000000000);
@@ -16,6 +16,11 @@ it('Sale Processing Test', function(){
     lp.enterPassword()
     lp.clickLogin()
     sp.clickdashboardsaleicon()
+   // sp.Cancelsale()
+   // sp.selectingNo()
+    cy.wait(3000)
+    sp.searchcustomer()
+    sp.clickcustomer_apply()
     cy.wait(2000)
     sp.Productsearch()
     sp.clickproductsearchbutton()
@@ -36,12 +41,17 @@ it('Sale Processing Test', function(){
     sp.Process()
     sp.Customerpurchaseorder(purchaseorder)
     sp.Saleconfirm()
-    sp.cashlocation()
-   // sp.paymentmethod()
-   // sp.pricechange()
-   // sp.paymentapply()
+   // sp.cashlocation()
+    cy.wait(5000)
+    sp.paymentmethod()
+    cy.wait(10000)
+    
+    sp.pricechange()
+    cy.wait(5000)
    // sp.cashmeup()
-   // sp.paymentok()
+    sp.paymentapply()
+    cy.wait(10000)
+    sp.paymentok()
 
 
 })
@@ -97,7 +107,7 @@ it('Sale Processing Kitting Product', function(){
     
 }) 
 
-it.only('Making Quote', function(){
+it('Making Quote', function(){
 
     const lp=new Login();
     const sp=new Sale();

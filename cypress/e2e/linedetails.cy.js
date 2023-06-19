@@ -3,9 +3,9 @@ import Sale from "../pages/Sale_Processing.js"
 
 Cypress.on('uncaught:exception', () => false)
 
-describe('Test Suite for Quote and Recall Sale', () => {
+describe('Test Suite for Line details', () => {
 
-it('Sale Order', function(){
+it('BackOrder', function(){
     const lp=new Login();
     const sp=new Sale();
     const purchaseorder=Math.floor(Math.random() * 100000000000);
@@ -22,22 +22,18 @@ it('Sale Order', function(){
     sp.clickproductsearchbutton()
     sp.Okbutton()
     cy.wait(5000)
-    sp.enterquantity()
-    sp.priceoverridereason()
-    sp.clickpriceoverride()
+    sp.Apply()
     cy.wait(3000)
-    sp.priceoverrideok()
-   // sp.Apply()
-    sp.clickeditline()
-    sp.clicklinesuppliedquantity()
-    sp.clicksaveline()
+    sp.clicklinedtails()
+    cy.wait(5000)
+    sp.enterlinedetailssupplied()
+    sp.clicklinedetailsok()
+    sp.clicknolostsale()
     cy.wait(5000)
     sp.Process()
     sp.entersopurchaseorder(purchaseorder)
     sp.clicksaleorderok()
-
-
-
-
 })
+
+
 })

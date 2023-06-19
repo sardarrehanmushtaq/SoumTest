@@ -25,8 +25,9 @@ class Sale{
    payment_entry_ok="/html/body/div[3]/div[2]/div/div[3]/button[1]"
    sell_as_kit="/html/body/div[3]/div[2]/div/div[2]/button[3]"
    product_price="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[1]/div[3]/div[1]/div[1]/div/div/div/input"
-   price_override_reason="/html/body/div[4]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/form/div/div/div/div[1]/div/div[1]/div/div/input"
-   price_override_ok="/html/body/div[4]/div[2]/div/div[3]/button[1]"
+   price_override_reason="/html/body/div[3]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/form/div/div/div/div[1]/div/div[1]/div/div/input"
+   priceoverridecomment="/html/body/div[3]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/form/div/div/div/div[2]/div/div"
+   price_override_ok="/html/body/div[3]/div[2]/div/div[3]/button[1]"
    product_details="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[4]/td[1]"
    kit_components="/html/body/div[1]/div/div[3]/div[2]/div/div[2]/button[3]"
    component_details="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[1]"
@@ -66,6 +67,10 @@ class Sale{
    saveline="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[4]/a[1]"
    sopurchaseorder="/html/body/div[3]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div/div/form/div/div[1]/div/div[4]/div/div/input"
    saleorderok="/html/body/div[3]/div[2]/div/div[3]/button[1]"
+   linedetails="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[1]"
+   linedetailssupplied="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[3]/div/div/div/div[1]/div/div[1]/div/form/div/div[1]/div/div[4]/div/div/input"
+   linedetailsok="/html/body/div[1]/div/div[3]/div[2]/div/div[3]/button[2]"
+   lostsalelinedetails="/html/body/div[3]/div[2]/div/div[2]/button[2]"
 
 clickdashboardsaleicon(){
     cy.xpath(this.dashboard_sale_icon).should("be.visible").click() 
@@ -161,7 +166,7 @@ cashlocation(){
 
 paymentmethod(){
     cy.xpath(this.payment_method).should("be.visible").clear()
-    cy.xpath(this.payment_method).should("be.visible").type("cash{enter}")
+    cy.xpath(this.payment_method).should("be.visible").type("cash")
 }
 
 paymentapply(){
@@ -173,7 +178,7 @@ cashmeup(){
 }
 pricechange(){
     cy.xpath(this.price_change).should("be.visible").clear()
-    cy.xpath(this.price_change).type('109{enter}')
+    cy.xpath(this.price_change).type('109')
 }
 
 paymentok(){
@@ -191,6 +196,9 @@ productprice(){
 }
 priceoverridereason(){
     cy.xpath(this.price_override_reason).should("be.visible").type('def')
+}
+clickpriceoverride(){
+    cy.xpath(this.priceoverridecomment).should("be.visible").click()  
 }
 priceoverrideok(){
     cy.xpath(this.price_override_ok).should("be.visible").click()
@@ -346,6 +354,25 @@ entersopurchaseorder(purchaseorder){
 }
 clicksaleorderok(){
     cy.xpath(this.saleorderok).should("be.visible").click()
+
+}
+clicklinedtails(){
+    cy.xpath(this.linedetails).should("be.visible").click()
+
+}
+enterlinedetailssupplied(){
+    cy.xpath(this.linedetailssupplied).should("be.visible").clear()
+    cy.xpath(this.linedetailssupplied).should("be.visible").type('0')
+
+
+}
+clicklinedetailsok(){
+    cy.xpath(this.linedetailsok).should("be.visible").type('0')
+
+
+}
+clicknolostsale(){
+    cy.xpath(this.lostsalelinedetails).should("be.visible").click()
 
 }
 }
