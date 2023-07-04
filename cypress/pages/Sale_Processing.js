@@ -1,12 +1,12 @@
 class Sale{
-   dashboard_sale_icon="/html/body/div/div/div[3]/div[1]/div[1]/div/div/div[1]/div/div"
+   dashboard_sale_icon="/html/body/div[1]/div/div/div[3]/div[1]/div[1]/div/div/div[1]/div"
    Burger_menu='/html/body/div/div/div[1]/header/div/button'
    Sale_processing= '/html/body/div[2]/div/div/div[1]/ul/div[1]'
    Inner_saleprocessing="/html/body/div[5]/div/div/div[1]/ul/div[2]/div[2]"
-   Product_search='/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/div/div/div[1]/div/div/input'
+   Product_search='/html/body/div[1]/div/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/div/div/div[1]/div/div/input'
    quantity="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[1]/div[2]/div[1]/div/div/input"
    Ok_button= '/html/body/div[3]/div[2]/div/div[3]/div[2]/div'
-   Apply_button='/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[2]/button[1]'
+   Apply_button="/html/body/div[1]/div/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[2]/button[1]"
    editinglinebtn="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[4]/a[1]"
    supplied="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[1]/div/div[1]/div/table/tbody/tr[1]/td[3]/div/div/div[1]/input"
    Process_button='/html/body/div[1]/div/div[3]/div[2]/div/div[3]/button[4]'
@@ -14,9 +14,9 @@ class Sale{
    Saleconfirmation="/html/body/div[3]/div[2]/div/div[3]/button[1]/span[1]/div"
    Cancel_sale="/html/body/div[1]/div/div[3]/div[3]/div/div[3]/button[3]"
    selecting_no="/html/body/div[3]/div[2]/div/div[2]/button[2]"
-   search_customer ="/html/body/div[1]/div/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div/div[1]/div/div/input"
+   search_customer ="/html/body/div[1]/div/div/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div/div[1]/div/div/input"
    Warehouse="/html/body/div[1]/div/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div/div[1]/div/div/input"
-   Apply_Customer="/html/body/div[1]/div/div[3]/div[1]/div[1]/div[1]/div[3]/button[2]"
+   Apply_Customer="/html/body/div[1]/div/div/div[3]/div[1]/div[1]/div[1]/div[3]/button[2]"
    cash_location="/html/body/div[3]/div[2]/div/div[2]/div/div[1]/div[2]/div/div[1]/div/div/input"
    payment_method="/html/body/div[3]/div[2]/div/div[2]/div/div[1]/div[3]/div[1]/div/div[1]/div/div/input"
    payment_apply="/html/body/div[3]/div[2]/div/div[2]/div/div[1]/div[3]/button"
@@ -33,7 +33,7 @@ class Sale{
    component_details="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[1]"
    component_details_ok="/html/body/div[1]/div/div[3]/div[2]/div/div[3]/button[2]"
    unsaved_button="/html/body/div[4]/div[2]/div/div[2]/button"
-   productsearchbutton="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/div/div/div[1]/div/div/div/button"
+   productsearchbutton="/html/body/div[1]/div/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/div/div/div[1]/div/div/div/button"
    product_catalogue="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[3]/div/div/div/div/button[2]/span[1]"
    addtoline="/html/body/div[1]/div/div[3]/div[2]/div/div[3]/button"
    addlineapply="/html/body/div[3]/div[2]/div/div[2]/div/div[2]/button[1]"
