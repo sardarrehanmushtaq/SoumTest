@@ -15,20 +15,20 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: npm install -g sass
-  displayName: 'Install SASS'
+#- script: npm install -g sass
+#  displayName: 'Install SASS'
 
-- task: NuGetToolInstaller@1
+# - task: NuGetToolInstaller@1
 
-- task: NuGetCommand@2
-  inputs:
-    command: 'restore'
-    restoreSolution: '$(solution)'
-    feedsToUse: 'config'
+# - task: NuGetCommand@2
+  # inputs:
+    # command: 'restore'
+    # restoreSolution: '$(solution)'
+    # feedsToUse: 'config'
     
-# - task: Npm@1
-#   inputs:
-#     command: 'install'
-#     workingDir: 'Package.json folder'
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: 'Package.json folder'
 
 
