@@ -7,16 +7,28 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
 steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
-- task: Npm@1
+
+- script: npm install -g sass
+  displayName: 'Install SASS'
+
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
   inputs:
-    command: 'install'
-    workingDir: 'Package.json folder'
+    command: 'restore'
+    restoreSolution: '$(solution)'
+    feedsToUse: 'config'
+    
+# - task: Npm@1
+#   inputs:
+#     command: 'install'
+#     workingDir: 'Package.json folder'
 
 
