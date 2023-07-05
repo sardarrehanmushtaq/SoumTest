@@ -29,6 +29,5 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: 'Package.json folder'
-
+    workingDir: '$(Build.SourcesDirectory)'
 
