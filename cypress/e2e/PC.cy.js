@@ -6,7 +6,7 @@ Cypress.on('uncaught:exception', () => false)
 describe('Test Suite for Product Catalogue', () => {
 
 
-it('Product Catalogue Kitting', function(){
+it.only('Product Catalogue Kitting', function(){
 
     const lp=new Login();
     const sp=new Sale();  
@@ -15,7 +15,16 @@ it('Product Catalogue Kitting', function(){
     lp.enterPassword()
     lp.clickLogin()
     sp.clickdashboardsaleicon()
-    cy.wait(10000)
+    cy.wait(5000)
+    sp.searchcustomer()
+   // sp.enterWarehouse()
+    sp.clickcustomer_apply()
+    sp.Productsearch()
+    sp.clickproductsearchbutton()
+    sp.Okbutton()
+    cy.wait(5000)
+    sp.Apply()
+    cy.wait(3000)
     sp.clickproductcatalogue()
     sp.clickkitting()
     sp.clickaddtoline()
@@ -23,7 +32,7 @@ it('Product Catalogue Kitting', function(){
    // sp.enterkittingprice()
     //sp.clickaddlineapply()
    // sp.priceoverridereason()
-   // sp.priceoverrideok()
+  //  sp.priceoverrideok()
     cy.wait(3000)
     sp.clickaddlineapply()
     sp.clicksellingprice()
@@ -75,7 +84,7 @@ it('Catalogue Product Details and Entry Details', function(){
 
 
 })
-it.only('Catalogue Search', function(){
+it('Catalogue Search', function(){
 
     const lp=new Login();
     const sp=new Sale();  

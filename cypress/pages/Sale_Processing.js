@@ -9,7 +9,7 @@ class Sale{
    Apply_button="/html/body/div[1]/div/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[2]/button[1]"
    editinglinebtn="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[4]/a[1]"
    supplied="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[1]/div/div[1]/div/table/tbody/tr[1]/td[3]/div/div/div[1]/input"
-   Process_button='/html/body/div[1]/div/div[3]/div[2]/div/div[3]/button[4]'
+   Process_button='/html/body/div[1]/div/div/div[3]/div[2]/div/div[3]/button[4]'
    Customer_purchase_order="/html/body/div[3]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div/div/form/div/div/div/div[11]/div/div/div/input"
    Saleconfirmation="/html/body/div[3]/div[2]/div/div[3]/button[1]/span[1]/div"
    Cancel_sale="/html/body/div[1]/div/div[3]/div[3]/div/div[3]/button[3]"
@@ -34,11 +34,11 @@ class Sale{
    component_details_ok="/html/body/div[1]/div/div[3]/div[2]/div/div[3]/button[2]"
    unsaved_button="/html/body/div[4]/div[2]/div/div[2]/button"
    productsearchbutton="/html/body/div[1]/div/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/div/div/div[1]/div/div/div/button"
-   product_catalogue="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[3]/div/div/div/div/button[2]/span[1]"
-   addtoline="/html/body/div[1]/div/div[3]/div[2]/div/div[3]/button"
+   product_catalogue="/html/body/div[1]/div/div/div[3]/div[1]/div[2]/div[3]/div/div/div/div/button[2]"
+   addtoline="/html/body/div[1]/div/div/div[3]/div[2]/div/div[3]/button"
    addlineapply="/html/body/div[3]/div[2]/div/div[2]/div/div[2]/button[1]"
    sellingpriceok="/html/body/div[4]/div[2]/div/div[2]/button[1]"
-   cataloguekitting="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div/div[1]/div[2]/div[1]/div/div/div[6]/div[2]/table/tbody/tr[2]/td[2]"
+   cataloguekitting="/html/body/div[1]/div/div/div[3]/div[1]/div[2]/div[4]/div/div[1]/div[2]/div[1]/div/div/div[6]/div[2]/table/tbody/tr[2]/td[2]"
    cataloguesellaskit="/html/body/div[4]/div[2]/div/div[2]/button[3]"
    kittingprice="/html/body/div[3]/div[2]/div/div[2]/div/div[1]/span[3]/div/div[1]/div[1]/div/div/div/input"
    Mtkitting="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div/div[1]/div[2]/div[1]/div/div/div[6]/div[1]/div/div[1]/div/table/tbody/tr[5]/td[2]"
@@ -67,9 +67,9 @@ class Sale{
    saveline="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[4]/a[1]"
    sopurchaseorder="/html/body/div[3]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div/div/form/div/div[1]/div/div[4]/div/div/input"
    saleorderok="/html/body/div[3]/div[2]/div/div[3]/button[1]"
-   linedetails="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[1]"
-   linedetailssupplied="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[3]/div/div/div/div[1]/div/div[1]/div/form/div/div[1]/div/div[4]/div/div/input"
-   linedetailsok="/html/body/div[1]/div/div[3]/div[2]/div/div[3]/button[2]"
+   linedetails="/html/body/div[1]/div/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[1]"
+   linedetailssupplied="/html/body/div[1]/div/div/div[3]/div[1]/div[2]/div[3]/div/div/div/div[1]/div/div[1]/div/form/div/div[1]/div/div[4]/div/div/input"
+   linedetailsok="/html/body/div[1]/div/div/div[3]/div[2]/div/div[3]/button[2]"
    lostsalelinedetails="/html/body/div[3]/div[2]/div/div[2]/button[2]"
 
 clickdashboardsaleicon(){

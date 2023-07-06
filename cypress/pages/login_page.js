@@ -1,8 +1,8 @@
 
 
  class Login{
-       Username="/html/body/div[1]/div/div/div[3]/div/div/div/form/div[1]/div/div/input"
-       Password="/html/body/div[1]/div/div/div[3]/div/div/div/form/div[2]/div/div/input"
+       Username="/html/body/div/div/div/div[3]/div/div/div/form/div[1]/div/div/input"
+       Password="/html/body/div/div/div/div[3]/div/div/div/form/div[2]/div/div/input"
        Loginbutton="/html/body/div[1]/div/div/div[3]/div/div/div/form/div[3]/button"
     
     enterURL(){
@@ -12,12 +12,12 @@
     }
 
     enterUsername(){
-        cy.xpath(this.Username).type(Cypress.env('USERNAME2')) 
+        cy.get(this.Username).type(Cypress.env('USERNAME2')) 
 
     }
 
     enterPassword(){
-        cy.xpath(this.Password).type(Cypress.env('PASSWORD2'))
+        cy.get(this.Password).type(Cypress.env('PASSWORD2'))
        
 
     }
