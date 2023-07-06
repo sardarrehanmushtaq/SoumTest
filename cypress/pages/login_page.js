@@ -12,12 +12,12 @@
     }
 
     enterUsername(){
-        cy.get(this.Username).type(Cypress.env('USERNAME2')) 
+        cy.xpath(this.Username).type(Cypress.env('USERNAME2')) 
 
     }
 
     enterPassword(){
-        cy.get(this.Password).type(Cypress.env('PASSWORD2'))
+        cy.xpath(this.Password).type(Cypress.env('PASSWORD2'))
        
 
     }

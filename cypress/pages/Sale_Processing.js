@@ -12,7 +12,7 @@ class Sale{
    Process_button='/html/body/div[1]/div/div/div[3]/div[2]/div/div[3]/button[4]'
    Customer_purchase_order="/html/body/div[3]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div/div/form/div/div/div/div[11]/div/div/div/input"
    Saleconfirmation="/html/body/div[3]/div[2]/div/div[3]/button[1]/span[1]/div"
-   Cancel_sale="/html/body/div[1]/div/div[3]/div[3]/div/div[3]/button[3]"
+   Cancel_sale="/html/body/div[1]/div/div/div[3]/div[2]/div/div[3]/button[3]"
    selecting_no="/html/body/div[3]/div[2]/div/div[2]/button[2]"
    search_customer ="/html/body/div[1]/div/div/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div/div[1]/div/div/input"
    Warehouse="/html/body/div[1]/div/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div/div[1]/div/div/input"
