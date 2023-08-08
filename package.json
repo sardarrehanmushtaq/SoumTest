@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run --spec ./cypress/e2e/PC*.cy.js",
+    "test": "npx cypress run --spec ./cypress/e2e/Sp*.cy.js",
     "runtests": "npm run test --"
   },
   "keywords": [],
