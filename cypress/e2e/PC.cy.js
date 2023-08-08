@@ -16,8 +16,8 @@ it.only('Product Catalogue Kitting', function(){
     lp.clickLogin()
     sp.clickdashboardsaleicon()
     cy.wait(5000)
-   // sp.Cancelsale()
- //   sp.selectingNo()
+    sp.Cancelsale()
+    sp.selectingNo()
     cy.wait(5000)
     sp.searchcustomer()
    // sp.enterWarehouse()
@@ -32,13 +32,15 @@ it.only('Product Catalogue Kitting', function(){
     sp.clickkitting()
     sp.clickaddtoline()
     sp.clicksellkit()
+
    // sp.enterkittingprice()
     //sp.clickaddlineapply()
    // sp.priceoverridereason()
   //  sp.priceoverrideok()
     cy.wait(3000)
     sp.clickaddlineapply()
-    sp.clicksellingprice()
+    sp.clciklowprice()
+
     
     
 

@@ -23,7 +23,7 @@ class Sale{
    cash_me_up="/html/body/div[4]/div[2]/div/div[2]/button"
    price_change="/html/body/div[3]/div[2]/div/div[2]/div/div[1]/div[3]/div[2]/div[1]/div/div/input"
    payment_entry_ok="/html/body/div[3]/div[2]/div/div[3]/button[1]"
-   sell_as_kit="/html/body/div[3]/div[2]/div/div[2]/button[3]"
+   sell_as_kit="cy.get(':nth-child(3) > .MuiButton-label')"
    product_price="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[1]/div[3]/div[1]/div[1]/div/div/div/input"
    price_override_reason="/html/body/div[3]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/form/div/div/div/div[1]/div/div[1]/div/div/input"
    priceoverridecomment="/html/body/div[3]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/form/div/div/div/div[2]/div/div"
@@ -39,7 +39,7 @@ class Sale{
    addlineapply="/html/body/div[3]/div[2]/div/div[2]/div/div[2]/button[1]"
    sellingpriceok="/html/body/div[4]/div[2]/div/div[2]/button[1]"
    cataloguekitting="/html/body/div[1]/div/div/div[3]/div[1]/div[2]/div[4]/div/div[1]/div[2]/div[1]/div/div/div[6]/div[2]/table/tbody/tr[2]/td[2]"
-   cataloguesellaskit="/html/body/div[4]/div[2]/div/div[2]/button[3]"
+   //cataloguesellaskit="cy.get(':nth-child(3) > .MuiButton-label')"
    kittingprice="/html/body/div[3]/div[2]/div/div[2]/div/div[1]/span[3]/div/div[1]/div[1]/div/div/div/input"
    Mtkitting="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div/div[1]/div[2]/div[1]/div/div/div[6]/div[1]/div/div[1]/div/table/tbody/tr[5]/td[2]"
    selectingboms="/html/body/div[5]/div[2]/div/div[2]/button[2]"
@@ -188,7 +188,7 @@ KittingProductsearch(){
     cy.xpath(this.Product_search).should("be.visible").type(Cypress.env('KITTING_PRODUCT'))
 }
 sellaskit(){
-    cy.xpath(this.sell_as_kit).should("be.visible").click()  
+    cy.get(this.sell_as_kit).should("be.visible").click()  
 
 }
 productprice(){
@@ -243,7 +243,10 @@ clickkitting(){
     cy.xpath(this.cataloguekitting).should("be.visible").click()
 }
 clicksellkit(){
-    cy.xpath(this.cataloguesellaskit).should("be.visible").click()
+    cy.get(':nth-child(3) > .MuiButton-label').click()
+}
+clciklowprice(){
+    cy.get('.MuiDialogActions-root > :nth-child(1) > .MuiButton-label').click()
 }
 enterkittingprice(){
     cy.xpath(this.kittingprice).should("be.visible").type('4000000}')
