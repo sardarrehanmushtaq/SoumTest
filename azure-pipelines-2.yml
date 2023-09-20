@@ -6,7 +6,7 @@ stages:
    jobs:
     - job : Job1
  - stage: Stage2
-   dependsOn: []
+   dependsOn: Stage1
    jobs:
     - job: Job2
 
