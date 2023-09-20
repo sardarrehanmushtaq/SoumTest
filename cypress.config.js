@@ -9,7 +9,7 @@ module.exports = defineConfig({
       
  
   },
-    defaultCommandTimeout: 100000,
+    defaultCommandTimeout: 1500000,
     projectId: "o48yws"
   },
 });

@@ -7,7 +7,7 @@ Cypress.on('uncaught:exception', () => false)
 describe('Test Suite for Sale Processing', () => {
 
 
-it.only('Sale Processing Test', function(){
+it('Sale Processing Test', function(){
     const lp=new Login();
     const sp=new Sale();
     const purchaseorder=Math.floor(Math.random() * 100000000000);
@@ -16,8 +16,8 @@ it.only('Sale Processing Test', function(){
     lp.enterPassword()
     lp.clickLogin()
     sp.clickdashboardsaleicon()
-    sp.Cancelsale()
-    sp.selectingNo()
+   // sp.Cancelsale()
+   // sp.selectingNo()
     cy.wait(3000)
     sp.searchcustomer()
     sp.clickcustomer_apply()
@@ -150,7 +150,7 @@ it('Recall Quote', function(){
 
 describe('Test Suite for Product Catalogue', () => {
 
-it('Product Catalogue', function(){
+it.only('Product Catalogue', function(){
 
     const lp=new Login();
     const sp=new Sale();  

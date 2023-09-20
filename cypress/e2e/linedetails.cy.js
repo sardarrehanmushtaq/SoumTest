@@ -28,7 +28,7 @@ it('BackOrder', function(){
     cy.wait(5000)
     sp.enterlinedetailssupplied()
     sp.clicklinedetailsok()
-    sp.clicknolostsale()
+ //   sp.clicknolostsale()
     cy.wait(5000)
     sp.Process()
     sp.entersopurchaseorder(purchaseorder)

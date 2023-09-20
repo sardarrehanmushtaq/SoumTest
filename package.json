@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run --spec ./cypress/e2e/Sp*.cy.js",
-    "runtests": "npm run test --"
+    "test": "npx cypress run --spec ./cypress/e2e/PC*.cy.js",
+    "runtests": "npm run test --",
+    "cypress:parallel": "cypress-parallel -d cypress/e2e/ -t 2 -s test"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,10 @@
   "devDependencies": {
     "@cypress/xpath": "^2.0.3",
     "cypress": "^13.2.0",
+    "cypress-multi-reporters": "^1.6.3",
     "cypress-xpath": "^2.0.1"
+  },
+  "dependencies": {
+    "cypress-parallel": "^0.13.0"
   }
 }
