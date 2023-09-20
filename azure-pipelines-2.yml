@@ -1,0 +1,13 @@
+
+pool:
+  vmImage: ubuntu-latest
+stages:
+ - stage : Stage1
+   jobs:
+    - job : Job1
+ - stage: Stage2
+   dependsOn: Stage1
+   jobs:
+    - job: Job2
+
+
