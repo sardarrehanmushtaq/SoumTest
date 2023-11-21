@@ -6,7 +6,7 @@ Cypress.on('uncaught:exception', () => false)
 describe('Test Suite for Product Catalogue', () => {
 
 
-it.only('Product Catalogue Kitting', function(){
+it('Product Catalogue Kitting', function(){
 
     const lp=new Login();
     const sp=new Sale();  

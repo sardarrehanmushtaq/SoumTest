@@ -5,7 +5,7 @@ Cypress.on('uncaught:exception', () => false)
 
 describe('Test Suite for Line details', () => {
 
-it('BackOrder', function(){
+it.only('BackOrder', function(){
     const lp=new Login();
     const sp=new Sale();
     const purchaseorder=Math.floor(Math.random() * 100000000000);

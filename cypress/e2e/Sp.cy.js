@@ -15,16 +15,18 @@ it('Sale Processing Test', function(){
     lp.enterUsername()
     lp.enterPassword()
     lp.clickLogin()
+
+    cy.wait(5000)
     sp.clickdashboardsaleicon()
    // sp.Cancelsale()
    // sp.selectingNo()
-    cy.wait(3000)
+    cy.wait(5000)
     sp.searchcustomer()
     sp.clickcustomer_apply()
     cy.wait(2000)
     sp.Productsearch()
     sp.clickproductsearchbutton()
-   // sp.clickburgermenu()
+    //sp.clickburgermenu()
    // sp.Saleprocessing()
    // sp.Innersaleprocessing()
    //// sp.Cancelsale()
@@ -36,6 +38,7 @@ it('Sale Processing Test', function(){
     cy.wait(5000)
     //sp.enterquantity()
     sp.Apply()
+    cy.wait(5000)
    // sp.editline()
     //sp.suppliedquantity()
     sp.Process()
@@ -44,35 +47,19 @@ it('Sale Processing Test', function(){
    // sp.cashlocation()
     cy.wait(5000)
     sp.paymentmethod()
-    cy.wait(10000)
-    
+    cy.wait(5000)
     sp.pricechange()
     cy.wait(5000)
    // sp.cashmeup()
     sp.paymentapply()
-    cy.wait(10000)
+    cy.wait(5000)
+    sp.returncash()
     sp.paymentok()
-
-
-})
-it('Sale Processing Add Product', function(){
-    const lp=new Login();
-    const sp=new Sale();
-    const purchaseorder=Math.floor(Math.random() * 100000000000);
-    lp.enterURL()
-    lp.enterUsername()
-    lp.enterPassword()
-    lp.clickLogin()
-    sp.clickdashboardsaleicon()
-    cy.wait(5000)
-    sp.Productsearch()
-    sp.clickproductsearchbutton()
-    sp.Okbutton()
-    sp.Apply()
-    cy.wait(5000)
-    
+    sp.clickareyousure()
 
 })
+
+
 
 it('Sale Processing Kitting Product', function(){
     const lp=new Login();
@@ -106,6 +93,33 @@ it('Sale Processing Kitting Product', function(){
     //sp.priceoverrideok()
     
 }) 
+it.only('BackOrder', function(){
+    const lp=new Login();
+    const sp=new Sale();
+    const purchaseorder=Math.floor(Math.random() * 100000000000);
+    lp.enterURL()
+    lp.enterUsername()
+    lp.enterPassword()
+    lp.clickLogin()
+    sp.clickdashboardsaleicon()
+    cy.wait(5000)
+    sp.searchcustomer()
+   // sp.enterWarehouse()
+    sp.clickcustomer_apply()
+    sp.Productsearch()
+    sp.clickproductsearchbutton()
+    sp.Okbutton()
+    cy.wait(5000)
+    sp.Apply()
+    cy.wait(3000)
+    sp.clicklinedtails()
+    cy.wait(5000)
+    sp.enterlinedetailssupplied()
+    sp.clicklinedetailsok()
+ //   sp.clicknolostsale()
+    cy.wait(5000)
+
+})
 
 it('Making Quote', function(){
 
@@ -150,7 +164,7 @@ it('Recall Quote', function(){
 
 describe('Test Suite for Product Catalogue', () => {
 
-it.only('Product Catalogue', function(){
+it('Product Catalogue', function(){
 
     const lp=new Login();
     const sp=new Sale();  

@@ -1,67 +1,68 @@
 class Sale{
-   dashboard_sale_icon="/html/body/div[1]/div/div/div[3]/div[1]/div[1]/div/div/div[1]/div"
-   Burger_menu='/html/body/div[1]/div/div/div[1]/header/div/button'
-   Sale_processing= '/html/body/div[2]/div/div/div[1]/ul/div[1]'
-   Inner_saleprocessing="/html/body/div[5]/div/div/div[1]/ul/div[2]/div[2]"
-   Product_search='/html/body/div[1]/div/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/div/div/div[1]/div/div/input'
-   quantity="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[1]/div[2]/div[1]/div/div/input"
-   Ok_button= '/html/body/div[3]/div[2]/div/div[3]/div[2]/div'
-   Apply_button="/html/body/div[1]/div/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[2]/button[1]"
-   editinglinebtn="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[4]/a[1]"
-   supplied="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[1]/div/div[1]/div/table/tbody/tr[1]/td[3]/div/div/div[1]/input"
-   Process_button='/html/body/div[1]/div/div/div[3]/div[2]/div/div[3]/button[4]'
-   Customer_purchase_order="/html/body/div[3]/div[2]/div/div[3]/div[1]/div/div/div/div/div/div[1]/div/div/div/form/div/div/div/div[11]/div/div/div/input"
-   Saleconfirmation="/html/body/div[3]/div[2]/div/div[3]/div[2]/button[1]"
-   Cancel_sale="/html/body/div[1]/div/div/div[3]/div[2]/div/div[3]/button[3]"
-   selecting_no="/html/body/div[3]/div[2]/div/div[2]/button[2]"
-   search_customer ="/html/body/div[1]/div/div/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div/div[1]/div/div/input"
-   Warehouse="/html/body/div[1]/div/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div/div[1]/div/div/input"
-   Apply_Customer="/html/body/div[1]/div/div/div[3]/div[1]/div[1]/div[1]/div[3]/button[2]"
+   dashboard_sale_icon="//a[@class='MuiButtonBase-root MuiCardActionArea-root src-components-DashboardView-DashboardView__quickAccessCardArea--2-4Qx']"
+   Burger_menu="//button[@class='MuiButtonBase-root MuiIconButton-root c2 c5']//span[@class='MuiIconButton-label']//*[name()='svg']"
+   Sale_processing= "//div[@title='Sales Processing']"
+   Inner_saleprocessing="//span[@class='MuiTypography-root MuiTypography-subheading MuiListItemText-primary'][normalize-space()='Sales Processing']"
+   Product_search="//input[@placeholder='Product']"
+   quantity="//input[@placeholder='0.00']"
+   Ok_button= "//div[@aria-label='Ok']//div[@class='dx-button-content']"
+   Apply_button="//span[normalize-space()='APPLY']"
+   editinglinebtn="//td[@class='dx-command-edit dx-command-edit-with-icons dx-cell-focus-disabled']//a[@title='Edit']"
+   supplied="//div[@class='dx-show-invalid-badge dx-numberbox dx-texteditor dx-editor-outlined dx-widget dx-state-hover dx-state-focused']//input[@role='spinbutton']"
+   Process_button="/html/body/div[1]/div/div/div[3]/div[2]/div/div[3]/button[4]"
+   Customer_purchase_order="//input[@name='CustomerPurchaseOrder']"
+   Saleconfirmation="//button[1]//span[1]//div[1]//*[name()='svg']"
+   Cancel_sale="//body/div[@id='root']/div/div[@class='src-App__app--2iKXm']/div[@class='src-components-Worksale-Worksale__worksaleOuter--J42pN']/div[@class='MuiBottomNavigation-root c696']/div[@value='0']/div[3]/button[3]/span[1]//*[name()='svg']//*[name()='path' and contains(@d,'M12 2C6.47')]"
+   selecting_no="//span[normalize-space()='No']"
+   search_customer ="//input[@placeholder='Customer']"
+   Warehouse="//label[@class='MuiFormLabel-root MuiInputLabel-root c1749 MuiInputLabel-animated']"
+   Apply_Customer="(//span[@class='MuiButton-label'][normalize-space()='APPLY'])[1]"
    cash_location="/html/body/div[3]/div[2]/div/div[2]/div/div[1]/div[2]/div/div[1]/div/div/input"
-   payment_method="/html/body/div[3]/div[2]/div/div[2]/div/div[1]/div[3]/div[1]/div/div[1]/div/div/input"
-   payment_apply="/html/body/div[3]/div[2]/div/div[2]/div/div[1]/div[3]/button"
-   cash_me_up="/html/body/div[4]/div[2]/div/div[2]/button"
-   price_change="/html/body/div[3]/div[2]/div/div[2]/div/div[1]/div[3]/div[2]/div[1]/div/div/input"
-   payment_entry_ok="/html/body/div[3]/div[2]/div/div[3]/button[1]"
-   sell_as_kit="cy.get(':nth-child(3) > .MuiButton-label')"
-   product_price="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[1]/div[3]/div[1]/div[1]/div/div/div/input"
-   price_override_reason="/html/body/div[3]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/form/div/div/div/div[1]/div/div[1]/div/div/input"
-   priceoverridecomment="/html/body/div[3]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/form/div/div/div/div[2]/div/div"
-   price_override_ok="/html/body/div[3]/div[2]/div/div[3]/button[1]"
-   product_details="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[4]/td[1]"
-   kit_components="/html/body/div[1]/div/div[3]/div[2]/div/div[2]/button[3]"
-   component_details="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[1]"
+   payment_method="/html/body/div[3]/div[2]/div/div[3]/div[1]/div/div/div[1]/div[3]/div[1]/div/div[1]/div/div/input"
+   payment_apply="//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-raised c725']"
+   returnpayment="//body/div[4]/div[2]/div[1]/div[3]/div[2]/button[1]/span[1]/div[1]//*[name()='svg']//*[name()='path' and contains(@d,'M12 2C6.48')]"
+   price_change="/html/body/div[3]/div[2]/div/div[3]/div[1]/div/div/div[1]/div[3]/div[2]/div[1]/div/div/input"
+   payment_entry_ok="//button[1]//span[1]//div[1]//*[name()='svg']"
+   areyousure="/html/body/div[4]/div[2]/div/div[2]/button[2]"
+   sell_as_kit="//span[normalize-space()='SELL AS KIT']"
+   product_price="//a[@class='MuiInputBase-input MuiInput-input c634 c653 MuiInputBase-inputType MuiInput-inputType']"
+   price_override_reason="//input[@name='OverrideReason']"
+   priceoverridecomment="//input[@name='OverrideReason']"
+   price_override_ok="//button[1]//span[1]//div[1]//*[name()='svg']"
+   product_details="//td[@class='dx-cell-focus-disabled']//*[name()='svg']//*[name()='path' and contains(@d,'M22 3H7c-.')]"
+   kit_components="//body/div[@id='root']/div/div[@class='src-App__app--2iKXm']/div[@class='src-components-Worksale-Worksale__worksaleOuter--J42pN']/div[@class='MuiBottomNavigation-root c696']/div[@value='0']/div[@class='c694']/button[3]/span[1]//*[name()='svg']"
+   component_details="/html/body/div[1]/div/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[1]"
    component_details_ok="/html/body/div[1]/div/div[3]/div[2]/div/div[3]/button[2]"
    unsaved_button="/html/body/div[4]/div[2]/div/div[2]/button"
    productsearchbutton="/html/body/div[1]/div/div/div[3]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/div/div/div[1]/div/div/div/button"
-   product_catalogue="/html/body/div[1]/div/div/div[3]/div[1]/div[2]/div[3]/div/div/div/div/button[2]"
-   addtoline="/html/body/div[1]/div/div/div[3]/div[2]/div/div[3]/button"
+   product_catalogue="//button[@class='MuiButtonBase-root MuiTab-root c5156 MuiTab-textColorInherit MuiTab-fullWidth c5158']"
+   addtoline="//body/div[@id='root']/div/div[@class='src-App__app--2iKXm']/div[@class='src-components-Worksale-Worksale__worksaleOuter--J42pN']/div[@class='MuiBottomNavigation-root c696']/div[@value='0']/div[3]/button[1]/span[1]//*[name()='svg']//*[name()='path' and contains(@d,'M12 2C6.48')]"
    addlineapply="/html/body/div[3]/div[2]/div/div[2]/div/div[2]/button[1]"
    sellingpriceok="/html/body/div[4]/div[2]/div/div[2]/button[1]"
    cataloguekitting="/html/body/div[1]/div/div/div[3]/div[1]/div[2]/div[4]/div/div[1]/div[2]/div[1]/div/div/div[6]/div[2]/table/tbody/tr[2]/td[2]"
    //cataloguesellaskit="cy.get(':nth-child(3) > .MuiButton-label')"
    kittingprice="/html/body/div[3]/div[2]/div/div[2]/div/div[1]/span[3]/div/div[1]/div[1]/div/div/div/input"
    Mtkitting="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div/div[1]/div[2]/div[1]/div/div/div[6]/div[1]/div/div[1]/div/table/tbody/tr[5]/td[2]"
-   selectingboms="/html/body/div[5]/div[2]/div/div[2]/button[2]"
-   enterquantityboms="/html/body/div[4]/div[2]/div/div[2]/div/div[1]/span[2]/div/div/div/input"
-   backorder="/html/body/div[5]/div[2]/div/div[2]/button[3]"
-   catalogueproductdetails="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div/div[1]/div[2]/div[1]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[1]"
-   entrydetails="/html/body/div[1]/div/div[3]/div[2]/div/div[2]/button[2]"
-   clickback="/html/body/div[1]/div/div[3]/div[2]/div/div[1]/div/button"
-   clickcatalogsearch="/html/body/div[1]/div/div[3]/div[2]/div/div[2]/button[1]"
-   enterproductsearch="/html/body/div[3]/div[2]/div/div[2]/div[1]/div/div/div[1]/input"
-   selectingsearch="/html/body/div[4]/div[2]/div/div[2]/div[2]/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td"
-   buttonok="/html/body/div[4]/div[2]/div/div[3]/button[2]"
+   selectingboms="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat c178 c182 MuiDialogActions-action"
+   enterquantityboms="quantityId"
+   backorder="/html/body/div[5]/div[2]/div/div[3]/div/button[3]"
+   catalogueproductdetails="/html[1]/body[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[6]/div[2]/table[1]/tbody[1]/tr[2]/td[1]/*[name()='svg'][1]/*[name()='path'][2]"
+   entrydetails="//body/div[@id='root']/div/div[@class='src-App__app--2iKXm']/div[@class='src-components-Worksale-Worksale__worksaleOuter--J42pN']/div[@class='MuiBottomNavigation-root c696']/div[@value='0']/div[@class='c694']/button[2]/span[1]//*[name()='svg']//*[name()='circle' and contains(@cx,'22')]"
+   clickback="//svg[@class='MuiButtonBase-root MuiBottomNavigationAction-root c700']"
+   clickcatalogsearch="//*[name()='rect' and contains(@xmlns,'http://www')]"
+   enterproductsearch="search-screen-text-box"
+   selectingsearch= "//td[normalize-space()='/B2B/Altenzo/PASSENGER TYRES/14']"
+   buttonok="//button[@class='MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-flat c7004 MuiDialogActions-action']"
    clicksearchicon="/html/body/div[4]/div[2]/div/div[2]/div[1]/button"
-   recallquote="/html/body/div[1]/div/div[3]/div[2]/div/div[2]/button[2]"
+   recallquote="//body/div[@id='root']/div/div[@class='src-App__app--2iKXm']/div[@class='src-components-Worksale-Worksale__worksaleOuter--J42pN']/div[@class='MuiBottomNavigation-root c696']/div[@value='0']/div[@class='c694']/button[3]/span[1]"
    quotetable="/html/body/div[3]/div[2]/div/div[2]/div/div[1]/div/div[6]/div/div/div[1]/div/table/tbody/tr[1]/td[1]"
    quoteok="/html/body/div[3]/div[2]/div/div[3]/button[1]"
-   makingquote="/html/body/div[1]/div/div[3]/div[2]/div/div[3]/button[2]"
-   confirmquote="/html/body/div[3]/div[2]/div/div[3]/button[1]"
-   parksale="/html/body/div[1]/div/div[3]/div[2]/div/div[3]/button[1]"
-   parksaleconfirm="/html/body/div[3]/div[2]/div/div[3]/button[1]"
-   recallsale="/html/body/div[1]/div/div[3]/div[2]/div/div[2]/button[1]"
-   recallsaleconfirm="/html/body/div[3]/div[2]/div/div[2]/div/div[1]/div/div[6]/div[2]/table/tbody/tr[1]/td[1]"
+   makingquote="//div[@class='MuiBottomNavigation-root c696']//div[3]//button[2]"
+   confirmquote="//div[@class='MuiDialogActions-root c191']//button[1]"
+   parksale="//body/div[@id='root']/div/div[@class='src-App__app--2iKXm']/div[@class='src-components-Worksale-Worksale__worksaleOuter--J42pN']/div[@class='MuiBottomNavigation-root c696']/div[@value='0']/div[3]/button[1]/span[1]"
+   parksaleconfirm="//span[normalize-space()='Park Sale']"
+   recallsale="//div[@class='c694']//button[1]"
+   recallsaleconfirm="//td[@class='dx-cell-focus-disabled']"
    edit_line="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[4]/a[1]"
    supplied_quantity="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[1]/div/div[1]/div/table/tbody/tr[1]/td[4]/div/div/div[1]/input"
    saveline="/html/body/div[1]/div/div[3]/div[1]/div[2]/div[4]/div[2]/div/div/div[6]/div[2]/table/tbody/tr[1]/td[4]/a[1]"
@@ -180,10 +181,22 @@ pricechange(){
     cy.xpath(this.price_change).should("be.visible").clear()
     cy.xpath(this.price_change).type('109')
 }
+returncash(){
+    cy.xpath(this.returnpayment).should("be.visible").click()
+
+    
+    
+}
 
 paymentok(){
-    cy.xpath(this.payment_entry_ok).should("be.gvisible").click()
+    cy.xpath(this.payment_entry_ok).should("be.visible").click()
+
 }
+clickareyousure(){
+    cy.xpath(this.areyousure).should("be.visible").click()
+
+}
+
 KittingProductsearch(){
     cy.xpath(this.Product_search).should("be.visible").type(Cypress.env('KITTING_PRODUCT'))
 }
