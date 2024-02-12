@@ -1,9 +1,9 @@
 
 
  class Login{
-       Username="/html/body/div/div/div/div[3]/div/div/div/form/div[1]/div/div/input"
-       Password="/html/body/div/div/div/div[3]/div/div/div/form/div[2]/div/div/input"
-       Loginbutton="/html/body/div[1]/div/div/div[3]/div/div/div/form/div[3]/button"
+       Username="//input[@id='user-name']"
+       Password="//input[@id='password']"
+       Loginbutton="//input[@id='login-button']"
     
     enterURL(){
         cy.visit(Cypress.config('baseUrl'), { timeout: 120000 })
@@ -11,12 +11,12 @@
 
     }
 
-    enterUsername(){
+    enterUsername2(){
         cy.xpath(this.Username).type(Cypress.env('USERNAME2')) 
 
     }
 
-    enterPassword(){
+    enterPassword2(){
         cy.xpath(this.Password).type(Cypress.env('PASSWORD2'))
        
 
@@ -24,6 +24,18 @@
 
     clickLogin(){
         cy.xpath(this.Loginbutton).click()
+
+    }
+    enterUsername1(){
+        cy.xpath(this.Username).type(Cypress.env('USERNAME')) 
+
+    }
+
+    enterPassword1(){
+        cy.xpath(this.Password).type(Cypress.env('PASSWORD'))
+       
+
+    
 
     }
 
