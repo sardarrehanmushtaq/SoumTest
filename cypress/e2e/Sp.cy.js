@@ -1,6 +1,5 @@
 import Login from "../pages/login_page.js"
 import Sauce from "../pages/Sauce_demo.js"
-import ProductPage from "../pages/Apitests.js"
 
 
 Cypress.on('uncaught:exception', () => false)
@@ -11,7 +10,6 @@ describe('Test Suite for Sauce demo', () => {
 it('login pass', function(){
     const lp=new Login();
     const sd=new Sauce();
-    const purchaseorder=Math.floor(Math.random() * 100000000000);
     lp.enterURL()
     lp.enterUsername2()
     lp.enterPassword2()
@@ -20,7 +18,6 @@ it('login pass', function(){
 it('login fail with invalid username and invalid password', function(){
     const lp=new Login();
     const sd=new Sauce();
-    const purchaseorder=Math.floor(Math.random() * 100000000000);
     lp.enterURL()
     lp.enterUsername1()
     lp.enterPassword1()
@@ -29,7 +26,6 @@ it('login fail with invalid username and invalid password', function(){
 it('login fail valid username but invalid password', function(){
     const lp=new Login();
     const sd=new Sauce();
-    const purchaseorder=Math.floor(Math.random() * 100000000000);
     lp.enterURL()
     lp.enterUsername2()
     lp.enterPassword1()
@@ -38,7 +34,6 @@ it('login fail valid username but invalid password', function(){
 it('login fail invalid username but valid password', function(){
     const lp=new Login();
     const sd=new Sauce();
-    const purchaseorder=Math.floor(Math.random() * 100000000000);
     lp.enterURL()
     lp.enterUsername1()
     lp.enterPassword2()
@@ -48,7 +43,6 @@ it('login fail invalid username but valid password', function(){
 it('login fail empty username empty password', function(){
     const lp=new Login();
     const sd=new Sauce();
-    const purchaseorder=Math.floor(Math.random() * 100000000000);
     lp.enterURL()
     lp.clickLogin()
 
@@ -56,7 +50,6 @@ it('login fail empty username empty password', function(){
 it('Verifying that I am landing on correct page', function(){
     const lp=new Login();
     const sd=new Sauce();
-    const purchaseorder=Math.floor(Math.random() * 100000000000);
     lp.enterURL()
     lp.enterUsername2()
     lp.enterPassword2()
@@ -68,7 +61,6 @@ it('Verifying that I am landing on correct page', function(){
 it('Adding to Cart from Product detail', function(){
     const lp=new Login();
     const sd=new Sauce();
-    const purchaseorder=Math.floor(Math.random() * 100000000000);
     lp.enterURL()
     lp.enterUsername2()
     lp.enterPassword2()
@@ -82,7 +74,6 @@ it('Adding to Cart from Product detail', function(){
 it('Adding product to cart on home page', function(){
     const lp=new Login();
     const sd=new Sauce();
-    const purchaseorder=Math.floor(Math.random() * 100000000000);
     lp.enterURL()
     lp.enterUsername2()
     lp.enterPassword2()
@@ -95,7 +86,6 @@ it('Adding product to cart on home page', function(){
 it('Verifying that product is on cart or not', function(){
     const lp=new Login();
     const sd=new Sauce();
-    const purchaseorder=Math.floor(Math.random() * 100000000000);
     lp.enterURL()
     lp.enterUsername2()
     lp.enterPassword2()
@@ -110,7 +100,6 @@ it('Verifying that product is on cart or not', function(){
 it('Removing product from cart', function(){
     const lp=new Login();
     const sd=new Sauce();
-    const purchaseorder=Math.floor(Math.random() * 100000000000);
     lp.enterURL()
     lp.enterUsername2()
     lp.enterPassword2()
@@ -125,7 +114,6 @@ it('Removing product from cart', function(){
 it('Clicking continue without data', function(){
     const lp=new Login();
     const sd=new Sauce();
-    const purchaseorder=Math.floor(Math.random() * 100000000000);
     lp.enterURL()
     lp.enterUsername2()
     lp.enterPassword2()
@@ -140,7 +128,6 @@ it('Clicking continue without data', function(){
 it('Checking out with correct data', function(){
     const lp=new Login();
     const sd=new Sauce();
-    const purchaseorder=Math.floor(Math.random() * 100000000000);
     lp.enterURL()
     lp.enterUsername2()
     lp.enterPassword2()
@@ -160,7 +147,6 @@ it('Checking out with correct data', function(){
 it('Going into About', function(){
     const lp=new Login();
     const sd=new Sauce();
-    const purchaseorder=Math.floor(Math.random() * 100000000000);
     lp.enterURL()
     lp.enterUsername2()
     lp.enterPassword2()
