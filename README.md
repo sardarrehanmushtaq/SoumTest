@@ -15,6 +15,7 @@ Make sure you have the following installed:
 
 - [Node.js](https://nodejs.org/)
 - [Cypress](https://www.cypress.io/)
+- Cypress-version: 10.8.0
 
 ## Setup
 **
